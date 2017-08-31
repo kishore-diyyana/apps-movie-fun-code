@@ -1,4 +1,4 @@
----
+er--
 resources:
 - name: my-movie-service-git
   type: git
@@ -23,7 +23,7 @@ jobs:
   - get: my-movie-service-git
     trigger: true
   - task: test
-    file: apps-movie-fun-code/my-ci/my-test.yml
+    file: my-movie-service-cf/my-ci/my-test.yml
 
 - name: deploy
   public: true
@@ -32,7 +32,7 @@ jobs:
     trigger: true
     passed: [test]
   - task: package
-    file: apps-movie-fun-code/my-ci/my-deploy.yml
+    file: my-movie-service-cf/my-ci/my-deploy.yml
   - put: my-movie-service-cf
     params:
       manifest: my-movie-service-cf/my-movie-manifest.yml
