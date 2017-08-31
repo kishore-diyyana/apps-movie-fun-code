@@ -1,4 +1,4 @@
-er--
+---
 resources:
 - name: my-movie-service-git
   type: git
