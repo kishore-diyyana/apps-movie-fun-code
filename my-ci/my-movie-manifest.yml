@@ -1,10 +1,10 @@
 applications:
-- name: my-movie-service-cf
+- name: my-movie-service
   instances: 1
   memory: 1024M
   disk_quota: 1024M
   random-route: true
   stack: cflinuxfs2
-  path: target/attendee-service-0.0.1-SNAPSHOT.jar
+  path: target/my-movie-service-0.0.1-SNAPSHOT.jar
   services:
     - my-movie-mysql

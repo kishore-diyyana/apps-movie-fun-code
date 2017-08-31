@@ -1,4 +1,4 @@
-------
+---
 resources:
 - name: my-movie-service-git
   type: git
@@ -35,7 +35,7 @@ jobs:
     file: my-movie-service-git/my-ci/my-deploy.yml
   - put: deploy-movie-service
     params:
-      manifest: my-movie-service-cf/my-movie-manifest.yml
+      manifest: my-movie-service/my-ci/my-movie-manifest.yml
       path: package-output/my-movie-service.jar
 
 # - name: smoke_test

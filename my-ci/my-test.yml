@@ -3,7 +3,7 @@ apt-get update && apt-get install -y curl
 
 set -ex
 
-pushd my-movie-service-cf
+pushd my-movie-service
   echo "Fetching Dependencies"
   ./mvnw clean compile > /dev/null
 

@@ -8,11 +8,11 @@ image_resource:
     tag: "8"
 
 inputs:
-- name: my-movie-service-cf
+- name: my-movie-service
 
 outputs:
 - name: package-output
 
 run:
-  path: -my-movie-service-cf/my-ci/tasks/my-deploy.sh
+  path: -my-movie-service/my-ci/sscript/my-deploy.sh
 
