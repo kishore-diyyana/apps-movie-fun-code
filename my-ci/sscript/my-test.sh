@@ -1,4 +1,4 @@
-pt-get update && apt-get install -y curl
+apt-get update && apt-get install -y curl
 
 set -ex
 
