@@ -1,0 +1,18 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: java
+    tag: "8"
+
+inputs:
+- name: my-movie-service-cf
+
+outputs:
+- name: package-output
+
+run:
+  path: -my-movie-service/my-ci/tasks/my-deploy.sh
+
