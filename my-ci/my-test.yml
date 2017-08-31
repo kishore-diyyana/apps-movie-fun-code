@@ -1,14 +1,13 @@
-#!/bin/bash
-apt-get update && apt-get install -y curl
+platform: linux
 
-set -ex
+image_resource:
+  type: docker-image
+  source:
+    repository: java
+    tag: "8"
 
-pushd my-movie-service
-  echo "Fetching Dependencies"
-  ./mvnw clean compile > /dev/null
+inputs:
+- name: my-movie-service-git
 
-  echo "Running Tests"
-  ./mvnw test
-popd
-
-exit 0
+run:
+  path: my-movie-service-git/my-ci/sscript/my-test.sh
