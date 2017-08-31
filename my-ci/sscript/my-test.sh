@@ -5,7 +5,8 @@ set -ex
 
 pushd my-movie-service-git
   echo "Fetching Dependencies"
-  ./mvnw clean compile > /dev/null
+   mkdir -p dev/null
+   ./mvnw clean compile > /dev/null
 
   echo "Running Tests"
   ./mvnw test
