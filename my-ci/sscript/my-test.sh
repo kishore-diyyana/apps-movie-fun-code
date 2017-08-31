@@ -4,7 +4,7 @@ apt-get update && apt-get install -y curl
 set -ex
 
 pushd my-movie-service-git
-  echo "Fetching Dependencies"
+  echo "Fetching Test Dependencies"
 
    ./mvnw clean compile > /dev/null
 
