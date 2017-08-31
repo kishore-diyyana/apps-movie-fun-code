@@ -1,12 +1,12 @@
----
+------
 resources:
 - name: my-movie-service-git
   type: git
   source:
-    uri: https://github.com/kishore-diyyana/apps-movie-fun-code.git   #<----- REPLACE ME
+    uri: https://github.com/kishore-diyyana/apps-movie-fun-code   #<----- REPLACE ME
     branch: spring-boot
 
-- name: my-movie-service-cf
+- name: deploy-movie-service
   type: cf
   source:
     api: https://api.sys.pikes.pal.pivotal.io        #<----- REPLACE ME
@@ -23,7 +23,7 @@ jobs:
   - get: my-movie-service-git
     trigger: true
   - task: test
-    file: my-movie-service-cf/my-ci/my-test.yml
+    file: my-movie-service-git/my-ci/my-test.yml
 
 - name: deploy
   public: true
@@ -32,8 +32,8 @@ jobs:
     trigger: true
     passed: [test]
   - task: package
-    file: my-movie-service-cf/my-ci/my-deploy.yml
-  - put: my-movie-service-cf
+    file: my-movie-service-git/my-ci/my-deploy.yml
+  - put: deploy-movie-service
     params:
       manifest: my-movie-service-cf/my-movie-manifest.yml
       path: package-output/my-movie-service.jar
