@@ -3,7 +3,7 @@ apt-get update && apt-get install -y curl
 
 set -ex
 
-pushd attendee-service-source
+pushd my-movie-service-cf
   echo "Fetching Dependencies"
   ./mvnw clean compile > /dev/null
 

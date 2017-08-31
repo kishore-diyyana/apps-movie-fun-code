@@ -14,5 +14,5 @@ outputs:
 - name: package-output
 
 run:
-  path: -my-movie-service/my-ci/tasks/my-deploy.sh
+  path: -my-movie-service-cf/my-ci/tasks/my-deploy.sh
 
