@@ -37,15 +37,3 @@ jobs:
     params:
       manifest: my-movie-service/my-ci/my-movie-manifest.yml
       path: package-output/my-movie-service.jar
-
-# - name: smoke_test
-#  public: true
-#  plan:
-#  - get: attendee-service-source
-#    trigger: true
-#    passed: [deploy]
-#  - task: smoke_test
-#    file: attendee-service-source/ci/tasks/smoke-test.yml
-#  params:
-#     ATTENDEE_SERVICE_URL: attendee-service-tripedal-helioscope.apps.pikes.pal.pivotal.io  <YOUR_ATTENDEE_SERVICE_URL>  #<---- REPLACE ME
-
